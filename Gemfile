@@ -90,7 +90,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-#  gem "rspec-rails"
+  gem "rspec-rails"
 end
 
 #############################################################################
