@@ -1,0 +1,56 @@
+name: RSpec
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    name: RSpec
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+      PGHOST: localhost
+      PGUSER: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+
+    services:
+      postgres:
+        image: postgres:12.9
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.0
+          bundler-cache: true
+
+#      - name: Setup Node
+#        uses: actions/setup-node@v2
+#        with:
+#          node-version: 16
+#          cache: yarn
+#
+#      - name: Install packages
+#        run: |
+#          yarn install --pure-lockfile
+
+      - name: Setup test database
+        run: |
+          bin/rails db:test:prepare
+
+      - name: Run tests
+        run: |
+          bin/rspec spec
