@@ -34,7 +34,7 @@ jobs:
 
     - name: Setup Brakeman
       env:
-        BRAKEMAN_VERSION: '5.20'
+        BRAKEMAN_VERSION: '5.2.1'
       run: |
         gem install brakeman --version $BRAKEMAN_VERSION
 
