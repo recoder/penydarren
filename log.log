@@ -1,0 +1,369 @@
+[CI RSpec Tests/CI] 🚀  Start image=ghcr.io/catthehacker/ubuntu:act-latest
+[CI RSpec Tests/CI]   🐳  docker pull image=ghcr.io/catthehacker/ubuntu:act-latest platform= username= forcePull=false
+[CI RSpec Tests/CI]   🐳  docker create image=ghcr.io/catthehacker/ubuntu:act-latest platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[CI RSpec Tests/CI]   🐳  docker run image=ghcr.io/catthehacker/ubuntu:act-latest platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[CI RSpec Tests/CI]   🐳  docker exec cmd=[mkdir -m 0777 -p /var/run/act] user=root workdir=
+[CI RSpec Tests/CI]   🐳  docker cp src=/home/recoder/src/penydarren/. dst=/home/recoder/src/penydarren
+[CI RSpec Tests/CI]   🐳  docker exec cmd=[mkdir -p /home/recoder/src/penydarren] user= workdir=
+[CI RSpec Tests/CI] ⭐  Run actions/checkout@v2
+[CI RSpec Tests/CI]   ✅  Success - actions/checkout@v2
+[CI RSpec Tests/CI] ⭐  Run ruby/setup-ruby@v1
+[CI RSpec Tests/CI]   🐳  docker cp src=/root/.cache/act/ruby-setup-ruby@v1/ dst=/var/run/act/actions/ruby-setup-ruby@v1/
+[CI RSpec Tests/CI]   🐳  docker exec cmd=[mkdir -p /var/run/act/actions/ruby-setup-ruby@v1/] user= workdir=
+[CI RSpec Tests/CI]   🐳  docker exec cmd=[node /var/run/act/actions/ruby-setup-ruby@v1/dist/index.js] user= workdir=
+[CI RSpec Tests/CI]   💬  ::debug::isExplicit: 3.0.3
+[CI RSpec Tests/CI]   💬  ::debug::explicit? true
+[CI RSpec Tests/CI]   💬  ::debug::checking cache: /opt/hostedtoolcache/Ruby/3.0.3/x64
+[CI RSpec Tests/CI]   💬  ::debug::not found
+[CI RSpec Tests/CI]   ❓  ::group::Modifying PATH
+[CI RSpec Tests/CI]   | Entries added to PATH to use selected Ruby:
+[CI RSpec Tests/CI]   |   /opt/hostedtoolcache/Ruby/3.0.3/x64/bin
+[CI RSpec Tests/CI]   ❓  ::endgroup::
+[CI RSpec Tests/CI]   ❓  ::group::Downloading Ruby
+[CI RSpec Tests/CI]   | https://github.com/ruby/ruby-builder/releases/download/toolcache/ruby-3.0.3-ubuntu-20.04.tar.gz
+[CI RSpec Tests/CI]   💬  ::debug::Downloading https://github.com/ruby/ruby-builder/releases/download/toolcache/ruby-3.0.3-ubuntu-20.04.tar.gz
+[CI RSpec Tests/CI]   💬  ::debug::Destination /tmp/23579ec0-9218-45f2-9799-4d1343f88bda
+[CI RSpec Tests/CI]   💬  ::debug::download complete
+[CI RSpec Tests/CI]   | Took   3.25 seconds
+[CI RSpec Tests/CI]   ❓  ::endgroup::
+[CI RSpec Tests/CI]   ❓  ::group::Extracting  Ruby
+[CI RSpec Tests/CI]   | [command]/usr/bin/tar -xz -C /opt/hostedtoolcache/Ruby/3.0.3 -f /tmp/23579ec0-9218-45f2-9799-4d1343f88bda
+[CI RSpec Tests/CI]   | Took   0.93 seconds
+[CI RSpec Tests/CI]   ❓  ::endgroup::
+[CI RSpec Tests/CI]   ❓  ::group::Print Ruby version
+[CI RSpec Tests/CI]   | [command]/opt/hostedtoolcache/Ruby/3.0.3/x64/bin/ruby --version
+[CI RSpec Tests/CI]   | ruby 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]
+[CI RSpec Tests/CI]   | Took   0.23 seconds
+[CI RSpec Tests/CI]   ❓  ::endgroup::
+[CI RSpec Tests/CI]   ❓  ::group::Installing Bundler
+[CI RSpec Tests/CI]   | Using Bundler 2.3.5 from Gemfile.lock BUNDLED WITH 2.3.5
+[CI RSpec Tests/CI]   | [command]/opt/hostedtoolcache/Ruby/3.0.3/x64/bin/gem install bundler -v 2.3.5
+[CI RSpec Tests/CI]   | Successfully installed bundler-2.3.5
+[CI RSpec Tests/CI]   | 1 gem installed
+[CI RSpec Tests/CI]   | Took 743.37 seconds
+[CI RSpec Tests/CI]   ❓  ::endgroup::
+[CI RSpec Tests/CI]   ❓  ::group::bundle install
+[CI RSpec Tests/CI]   | [command]/opt/hostedtoolcache/Ruby/3.0.3/x64/bin/bundle config --local path /home/recoder/src/penydarren/vendor/bundle
+[CI RSpec Tests/CI]   | [command]/opt/hostedtoolcache/Ruby/3.0.3/x64/bin/bundle config --local deployment true
+[CI RSpec Tests/CI]   | Cache key: setup-ruby-bundler-cache-v3-ubuntu-20.04-ruby-3.0.3-Gemfile.lock-2f1d27ed304f6edff9fb2a6dfb58b0a9bf19d17d40f1adde3b397ac2eaf3e2c4
+[CI RSpec Tests/CI]   💬  ::debug::Resolved Keys:
+[CI RSpec Tests/CI]   💬  ::debug::["setup-ruby-bundler-cache-v3-ubuntu-20.04-ruby-3.0.3-Gemfile.lock-2f1d27ed304f6edff9fb2a6dfb58b0a9bf19d17d40f1adde3b397ac2eaf3e2c4","setup-ruby-bundler-cache-v3-ubuntu-20.04-ruby-3.0.3-Gemfile.lock-"]
+[CI RSpec Tests/CI]   💬  ::debug::Checking zstd --version
+[CI RSpec Tests/CI]   💬  ::debug::*** zstd command line interface 64-bits v1.4.4, by Yann Collet ***
+[CI RSpec Tests/CI]   💬  ::debug::getCacheEntry - Attempt 1 of 2 failed with error: Cache Service Url not found, unable to restore cache.
+[CI RSpec Tests/CI]   💬  ::debug::getCacheEntry - Attempt 2 of 2 failed with error: Cache Service Url not found, unable to restore cache.
+[CI RSpec Tests/CI]   | [warning] There was an error restoring the cache getCacheEntry failed: Cache Service Url not found, unable to restore cache.
+[CI RSpec Tests/CI]   | [command]/opt/hostedtoolcache/Ruby/3.0.3/x64/bin/bundle install --jobs 4
+[CI RSpec Tests/CI]   | Don't run Bundler as root. Bundler can ask for sudo if it is needed, and
+[CI RSpec Tests/CI]   | installing your bundle as root will break this application for all non-root
+[CI RSpec Tests/CI]   | users on this machine.
+[CI RSpec Tests/CI]   | Fetching gem metadata from https://rubygems.org/..........
+[CI RSpec Tests/CI]   | Fetching rake 13.0.6
+[CI RSpec Tests/CI]   | Installing rake 13.0.6
+[CI RSpec Tests/CI]   | Fetching concurrent-ruby 1.1.9
+[CI RSpec Tests/CI]   | Fetching minitest 5.15.0
+[CI RSpec Tests/CI]   | Fetching erubi 1.10.0
+[CI RSpec Tests/CI]   | Fetching builder 3.2.4
+[CI RSpec Tests/CI]   | Installing erubi 1.10.0
+[CI RSpec Tests/CI]   | Installing builder 3.2.4
+[CI RSpec Tests/CI]   | Installing minitest 5.15.0
+[CI RSpec Tests/CI]   | Fetching racc 1.6.0
+[CI RSpec Tests/CI]   | Fetching crass 1.0.6
+[CI RSpec Tests/CI]   | Installing concurrent-ruby 1.1.9
+[CI RSpec Tests/CI]   | Fetching rack 2.2.3
+[CI RSpec Tests/CI]   | Installing racc 1.6.0 with native extensions
+[CI RSpec Tests/CI]   | Installing crass 1.0.6
+[CI RSpec Tests/CI]   | Installing rack 2.2.3
+[CI RSpec Tests/CI]   | Fetching nio4r 2.5.8
+[CI RSpec Tests/CI]   | Installing nio4r 2.5.8 with native extensions
+[CI RSpec Tests/CI]   | Fetching websocket-extensions 0.1.5
+[CI RSpec Tests/CI]   | Fetching marcel 1.0.2
+[CI RSpec Tests/CI]   | Installing websocket-extensions 0.1.5
+[CI RSpec Tests/CI]   | Fetching mini_mime 1.1.2
+[CI RSpec Tests/CI]   | Installing marcel 1.0.2
+[CI RSpec Tests/CI]   | Fetching digest 3.1.0
+[CI RSpec Tests/CI]   | Installing mini_mime 1.1.2
+[CI RSpec Tests/CI]   | Fetching io-wait 0.2.1
+[CI RSpec Tests/CI]   | Installing digest 3.1.0 with native extensions
+[CI RSpec Tests/CI]   | Installing io-wait 0.2.1 with native extensions
+[CI RSpec Tests/CI]   | Fetching timeout 0.2.0
+[CI RSpec Tests/CI]   | Using strscan 3.0.1
+[CI RSpec Tests/CI]   | Fetching public_suffix 4.0.6
+[CI RSpec Tests/CI]   | Installing timeout 0.2.0
+[CI RSpec Tests/CI]   | Fetching bindex 0.8.1
+[CI RSpec Tests/CI]   | Installing bindex 0.8.1 with native extensions
+[CI RSpec Tests/CI]   | Installing public_suffix 4.0.6
+[CI RSpec Tests/CI]   | Fetching msgpack 1.4.4
+[CI RSpec Tests/CI]   | Installing msgpack 1.4.4 with native extensions
+[CI RSpec Tests/CI]   | Using bundler 2.3.5
+[CI RSpec Tests/CI]   | Fetching matrix 0.4.2
+[CI RSpec Tests/CI]   | Installing matrix 0.4.2
+[CI RSpec Tests/CI]   | Fetching regexp_parser 2.2.0
+[CI RSpec Tests/CI]   | Installing regexp_parser 2.2.0
+[CI RSpec Tests/CI]   | Fetching childprocess 4.1.0
+[CI RSpec Tests/CI]   | Installing childprocess 4.1.0
+[CI RSpec Tests/CI]   | Fetching method_source 1.0.0
+[CI RSpec Tests/CI]   | Installing method_source 1.0.0
+[CI RSpec Tests/CI]   | Fetching thor 1.2.1
+[CI RSpec Tests/CI]   | Installing thor 1.2.1
+[CI RSpec Tests/CI]   | Fetching zeitwerk 2.5.4
+[CI RSpec Tests/CI]   | Installing zeitwerk 2.5.4
+[CI RSpec Tests/CI]   | Fetching io-console 0.5.11
+[CI RSpec Tests/CI]   | Installing io-console 0.5.11 with native extensions
+[CI RSpec Tests/CI]   | Fetching diff-lcs 1.5.0
+[CI RSpec Tests/CI]   | Installing diff-lcs 1.5.0
+[CI RSpec Tests/CI]   | Fetching pg 1.3.1
+[CI RSpec Tests/CI]   | Installing pg 1.3.1 with native extensions
+[CI RSpec Tests/CI]   | Fetching rexml 3.2.5
+[CI RSpec Tests/CI]   | Installing rexml 3.2.5
+[CI RSpec Tests/CI]   | Fetching rspec-support 3.10.3
+[CI RSpec Tests/CI]   | Installing rspec-support 3.10.3
+[CI RSpec Tests/CI]   | Fetching rubyzip 2.3.2
+[CI RSpec Tests/CI]   | Installing rubyzip 2.3.2
+[CI RSpec Tests/CI]   | Fetching rack-test 1.1.0
+[CI RSpec Tests/CI]   | Installing rack-test 1.1.0
+[CI RSpec Tests/CI]   | Fetching i18n 1.9.1
+[CI RSpec Tests/CI]   | Installing i18n 1.9.1
+[CI RSpec Tests/CI]   | Fetching tzinfo 2.0.4
+[CI RSpec Tests/CI]   | Installing tzinfo 2.0.4
+[CI RSpec Tests/CI]   | Fetching sprockets 4.0.2
+[CI RSpec Tests/CI]   | Installing sprockets 4.0.2
+[CI RSpec Tests/CI]   | Fetching websocket-driver 0.7.5
+[CI RSpec Tests/CI]   | Installing websocket-driver 0.7.5 with native extensions
+[CI RSpec Tests/CI]   | Fetching mail 2.7.1
+[CI RSpec Tests/CI]   | Fetching nokogiri 1.13.1 (x86_64-linux)
+[CI RSpec Tests/CI]   | Installing mail 2.7.1
+[CI RSpec Tests/CI]   | Fetching net-protocol 0.1.2
+[CI RSpec Tests/CI]   | Installing net-protocol 0.1.2
+[CI RSpec Tests/CI]   | Fetching addressable 2.8.0
+[CI RSpec Tests/CI]   | Installing addressable 2.8.0
+[CI RSpec Tests/CI]   | Fetching puma 5.6.1
+[CI RSpec Tests/CI]   | Installing puma 5.6.1 with native extensions
+[CI RSpec Tests/CI]   | Installing nokogiri 1.13.1 (x86_64-linux)
+[CI RSpec Tests/CI]   | Fetching reline 0.3.1
+[CI RSpec Tests/CI]   | Installing reline 0.3.1
+[CI RSpec Tests/CI]   | Fetching rspec-core 3.10.2
+[CI RSpec Tests/CI]   | Installing rspec-core 3.10.2
+[CI RSpec Tests/CI]   | Fetching rspec-expectations 3.10.2
+[CI RSpec Tests/CI]   | Installing rspec-expectations 3.10.2
+[CI RSpec Tests/CI]   | Fetching rspec-mocks 3.10.3
+[CI RSpec Tests/CI]   | Installing rspec-mocks 3.10.3
+[CI RSpec Tests/CI]   | Fetching selenium-webdriver 4.1.0
+[CI RSpec Tests/CI]   | Installing selenium-webdriver 4.1.0
+[CI RSpec Tests/CI]   | Fetching activesupport 7.0.1
+[CI RSpec Tests/CI]   | Installing activesupport 7.0.1
+[CI RSpec Tests/CI]   | Fetching net-imap 0.2.3
+[CI RSpec Tests/CI]   | Installing net-imap 0.2.3
+[CI RSpec Tests/CI]   | Using net-pop 0.1.1
+[CI RSpec Tests/CI]   | Fetching net-smtp 0.3.1
+[CI RSpec Tests/CI]   | Installing net-smtp 0.3.1
+[CI RSpec Tests/CI]   | Fetching loofah 2.13.0
+[CI RSpec Tests/CI]   | Installing loofah 2.13.0
+[CI RSpec Tests/CI]   | Fetching irb 1.4.1
+[CI RSpec Tests/CI]   | Fetching xpath 3.2.0
+[CI RSpec Tests/CI]   | Installing xpath 3.2.0
+[CI RSpec Tests/CI]   | Installing irb 1.4.1
+[CI RSpec Tests/CI]   | Fetching webdrivers 5.0.0
+[CI RSpec Tests/CI]   | Fetching rails-dom-testing 2.0.3
+[CI RSpec Tests/CI]   | Installing rails-dom-testing 2.0.3
+[CI RSpec Tests/CI]   | Installing webdrivers 5.0.0
+[CI RSpec Tests/CI]   | Fetching globalid 1.0.0
+[CI RSpec Tests/CI]   | Fetching activemodel 7.0.1
+[CI RSpec Tests/CI]   | Installing globalid 1.0.0
+[CI RSpec Tests/CI]   | Installing activemodel 7.0.1
+[CI RSpec Tests/CI]   | Fetching rails-html-sanitizer 1.4.2
+[CI RSpec Tests/CI]   | Fetching bootsnap 1.10.2
+[CI RSpec Tests/CI]   | Installing rails-html-sanitizer 1.4.2
+[CI RSpec Tests/CI]   | Installing bootsnap 1.10.2 with native extensions
+[CI RSpec Tests/CI]   | Fetching capybara 3.36.0
+[CI RSpec Tests/CI]   | Installing capybara 3.36.0
+[CI RSpec Tests/CI]   | Fetching debug 1.4.0
+[CI RSpec Tests/CI]   | Installing debug 1.4.0 with native extensions
+[CI RSpec Tests/CI]   | Fetching activerecord 7.0.1
+[CI RSpec Tests/CI]   | Installing activerecord 7.0.1
+[CI RSpec Tests/CI]   | Fetching activejob 7.0.1
+[CI RSpec Tests/CI]   | Fetching actionview 7.0.1
+[CI RSpec Tests/CI]   | Installing activejob 7.0.1
+[CI RSpec Tests/CI]   | Installing actionview 7.0.1
+[CI RSpec Tests/CI]   | Fetching actionpack 7.0.1
+[CI RSpec Tests/CI]   | Installing actionpack 7.0.1
+[CI RSpec Tests/CI]   | Fetching actioncable 7.0.1
+[CI RSpec Tests/CI]   | Fetching activestorage 7.0.1
+[CI RSpec Tests/CI]   | Installing actioncable 7.0.1
+[CI RSpec Tests/CI]   | Installing activestorage 7.0.1
+[CI RSpec Tests/CI]   | Fetching actionmailer 7.0.1
+[CI RSpec Tests/CI]   | Fetching railties 7.0.1
+[CI RSpec Tests/CI]   | Installing actionmailer 7.0.1
+[CI RSpec Tests/CI]   | Installing railties 7.0.1
+[CI RSpec Tests/CI]   | Fetching sprockets-rails 3.4.2
+[CI RSpec Tests/CI]   | Installing sprockets-rails 3.4.2
+[CI RSpec Tests/CI]   | Fetching actionmailbox 7.0.1
+[CI RSpec Tests/CI]   | Installing actionmailbox 7.0.1
+[CI RSpec Tests/CI]   | Fetching actiontext 7.0.1
+[CI RSpec Tests/CI]   | Fetching cssbundling-rails 1.0.0
+[CI RSpec Tests/CI]   | Installing cssbundling-rails 1.0.0
+[CI RSpec Tests/CI]   | Installing actiontext 7.0.1
+[CI RSpec Tests/CI]   | Fetching jsbundling-rails 1.0.0
+[CI RSpec Tests/CI]   | Fetching rspec-rails 5.1.0
+[CI RSpec Tests/CI]   | Installing jsbundling-rails 1.0.0
+[CI RSpec Tests/CI]   | Installing rspec-rails 5.1.0
+[CI RSpec Tests/CI]   | Fetching stimulus-rails 1.0.2
+[CI RSpec Tests/CI]   | Installing stimulus-rails 1.0.2
+[CI RSpec Tests/CI]   | Fetching turbo-rails 1.0.1
+[CI RSpec Tests/CI]   | Fetching web-console 4.2.0
+[CI RSpec Tests/CI]   | Installing turbo-rails 1.0.1
+[CI RSpec Tests/CI]   | Installing web-console 4.2.0
+[CI RSpec Tests/CI]   | Fetching rails 7.0.1
+[CI RSpec Tests/CI]   | Installing rails 7.0.1
+[CI RSpec Tests/CI]   | Bundle complete! 16 Gemfile dependencies, 80 gems now installed.
+[CI RSpec Tests/CI]   | Bundled gems are installed into `./vendor/bundle`
+[CI RSpec Tests/CI]   | Post-install message from rubyzip:
+[CI RSpec Tests/CI]   | RubyZip 3.0 is coming!
+[CI RSpec Tests/CI]   | **********************
+[CI RSpec Tests/CI]   | 
+[CI RSpec Tests/CI]   | The public API of some Rubyzip classes has been modernized to use named
+[CI RSpec Tests/CI]   | parameters for optional arguments. Please check your usage of the
+[CI RSpec Tests/CI]   | following classes:
+[CI RSpec Tests/CI]   |   * `Zip::File`
+[CI RSpec Tests/CI]   |   * `Zip::Entry`
+[CI RSpec Tests/CI]   |   * `Zip::InputStream`
+[CI RSpec Tests/CI]   |   * `Zip::OutputStream`
+[CI RSpec Tests/CI]   | 
+[CI RSpec Tests/CI]   | Please ensure that your Gemfiles and .gemspecs are suitably restrictive
+[CI RSpec Tests/CI]   | to avoid an unexpected breakage when 3.0 is released (e.g. ~> 2.3.0).
+[CI RSpec Tests/CI]   | See https://github.com/rubyzip/rubyzip for details. The Changelog also
+[CI RSpec Tests/CI]   | lists other enhancements and bugfixes that have been implemented since
+[CI RSpec Tests/CI]   | version 2.3.0.
+[CI RSpec Tests/CI]   | Saving cache
+[CI RSpec Tests/CI]   💬  ::debug::Checking zstd --version
+[CI RSpec Tests/CI]   💬  ::debug::*** zstd command line interface 64-bits v1.4.4, by Yann Collet ***
+[CI RSpec Tests/CI]   💬  ::debug::Reserving Cache
+[CI RSpec Tests/CI]   💬  ::debug::reserveCache - Attempt 1 of 2 failed with error: Cache Service Url not found, unable to restore cache.
+[CI RSpec Tests/CI]   💬  ::debug::reserveCache - Attempt 2 of 2 failed with error: Cache Service Url not found, unable to restore cache.
+[CI RSpec Tests/CI]   | [warning]reserveCache failed: Cache Service Url not found, unable to restore cache.
+[CI RSpec Tests/CI]   | Took 1135.69 seconds
+[CI RSpec Tests/CI]   ❓  ::endgroup::
+[CI RSpec Tests/CI]   | 
+[CI RSpec Tests/CI]   ⚙  ::set-output:: ruby-prefix=/opt/hostedtoolcache/Ruby/3.0.3/x64
+[CI RSpec Tests/CI]   ✅  Success - ruby/setup-ruby@v1
+[CI RSpec Tests/CI] ⭐  Run Install PostgreSQL
+[CI RSpec Tests/CI]   🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /home/recoder/src/penydarren/workflow/2] user= workdir=
+[CI RSpec Tests/CI]   ✅  Success - Install PostgreSQL
+[CI RSpec Tests/CI] ⭐  Run Setup test database
+[CI RSpec Tests/CI]   🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /home/recoder/src/penydarren/workflow/3] user= workdir=
+[CI RSpec Tests/CI]   | fe_sendauth: no password supplied
+[CI RSpec Tests/CI]   | Couldn't create 'penydarren_test' database. Please check your configuration.
+[CI RSpec Tests/CI]   | rails aborted!
+[CI RSpec Tests/CI]   | ActiveRecord::ConnectionNotEstablished: fe_sendauth: no password supplied
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_handling.rb:280:in `connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/postgresql_database_tasks.rb:12:in `connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/postgresql_database_tasks.rb:26:in `create'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:122:in `create'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:184:in `block in create_current'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:552:in `block (2 levels) in each_current_configuration'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:549:in `each'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:549:in `block in each_current_configuration'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:548:in `each'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:548:in `each_current_configuration'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:184:in `create_current'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/railties/databases.rake:45:in `block (2 levels) in <main>'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `block in execute'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `each'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `execute'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:219:in `block in invoke_with_call_chain'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `synchronize'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `invoke_with_call_chain'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:243:in `block in invoke_prerequisites'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:241:in `each'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:241:in `invoke_prerequisites'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:218:in `block in invoke_with_call_chain'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `synchronize'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `invoke_with_call_chain'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:188:in `invoke'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:160:in `invoke_task'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `block (2 levels) in top_level'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `each'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `block in top_level'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:125:in `run_with_threads'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:110:in `top_level'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/railties-7.0.1/lib/rails/commands/rake/rake_command.rb:24:in `block (2 levels) in perform'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:186:in `standard_exception_handling'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/railties-7.0.1/lib/rails/commands/rake/rake_command.rb:24:in `block in perform'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/rake_module.rb:59:in `with_application'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/railties-7.0.1/lib/rails/commands/rake/rake_command.rb:18:in `perform'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/railties-7.0.1/lib/rails/command.rb:51:in `invoke'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/railties-7.0.1/lib/rails/commands.rb:18:in `<main>'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+[CI RSpec Tests/CI]   | 
+[CI RSpec Tests/CI]   | Caused by:
+[CI RSpec Tests/CI]   | PG::ConnectionBad: fe_sendauth: no password supplied
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/pg-1.3.1/lib/pg/connection.rb:637:in `async_connect_or_reset'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/pg-1.3.1/lib/pg/connection.rb:706:in `new'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/pg-1.3.1/lib/pg.rb:69:in `connect'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/postgresql_adapter.rb:78:in `new_client'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/connection_handling.rb:280:in `connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/postgresql_database_tasks.rb:12:in `connection'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/postgresql_database_tasks.rb:26:in `create'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:122:in `create'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:184:in `block in create_current'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:552:in `block (2 levels) in each_current_configuration'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:549:in `each'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:549:in `block in each_current_configuration'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:548:in `each'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:548:in `each_current_configuration'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/tasks/database_tasks.rb:184:in `create_current'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/activerecord-7.0.1/lib/active_record/railties/databases.rake:45:in `block (2 levels) in <main>'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `block in execute'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `each'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `execute'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:219:in `block in invoke_with_call_chain'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `synchronize'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `invoke_with_call_chain'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:243:in `block in invoke_prerequisites'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:241:in `each'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:241:in `invoke_prerequisites'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:218:in `block in invoke_with_call_chain'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `synchronize'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `invoke_with_call_chain'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/task.rb:188:in `invoke'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:160:in `invoke_task'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `block (2 levels) in top_level'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `each'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `block in top_level'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:125:in `run_with_threads'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:110:in `top_level'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/railties-7.0.1/lib/rails/commands/rake/rake_command.rb:24:in `block (2 levels) in perform'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/application.rb:186:in `standard_exception_handling'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/railties-7.0.1/lib/rails/commands/rake/rake_command.rb:24:in `block in perform'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/lib/rake/rake_module.rb:59:in `with_application'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/railties-7.0.1/lib/rails/commands/rake/rake_command.rb:18:in `perform'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/railties-7.0.1/lib/rails/command.rb:51:in `invoke'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/railties-7.0.1/lib/rails/commands.rb:18:in `<main>'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+[CI RSpec Tests/CI]   | /home/recoder/src/penydarren/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+[CI RSpec Tests/CI]   | Tasks: TOP => db:setup => db:create
+[CI RSpec Tests/CI]   | (See full trace by running task with --trace)
+[CI RSpec Tests/CI]   ❌  Failure - Setup test database
