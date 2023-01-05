@@ -1,0 +1,12 @@
+require:
+  - rubocop-rspec
+  - rubocop-rails
+
+
+# TODO: enable these
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
